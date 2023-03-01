@@ -1,0 +1,31 @@
+---
+const { cat } = Astro.props;
+console.log(cat)
+---
+<div>
+    <a href={`/${cat.slug}/`}>
+        <article class="card">
+            {cat.image && <img width={720} height={360} src={cat.image} alt="" />}
+            <h1>{cat.name}</h1>
+        </article>
+        </a>
+</div>
+
+<style>
+    article {
+
+    }
+    h1 {
+        margin: auto;
+        padding: 16px 16px;
+    }
+	header {
+		margin: 0em 0 2em;
+	}
+    a:link {
+        text-decoration: none;
+    }
+    img {
+        border-radius: 20px 20px 0 0;
+    }
+</style>
